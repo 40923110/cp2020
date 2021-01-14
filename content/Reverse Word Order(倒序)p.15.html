@@ -133,30 +133,104 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Develop << <a href='Develop.html'>Previous</a> <a href='gitlab-ci.yml.html'>Next</a> >> gitlab-ci.yml<br /><h1>Hint</h1>
-<ol>
-<li>是否了解如何設定 Github Pages?</li>
-<li>是否了解如何設定 Gitlab Pages?</li>
-<li>是否了解如何設定 Heroku?</li>
-</ol>
-<p>作業一的目的:</p>
-<ol>
-<li>閱讀與電腦軟硬體相關的英文資料, 藉以了解英文相關術語</li>
-<li>了解電腦與網路相關設定</li>
-<li>了解如何使用 Git, Github 與 CMSiMDE</li>
-</ol>
-<p>作業二的目的:</p>
-<ol>
-<li>實際了解 Python 程式在課程推動上的應用</li>
-<li>了解如何從網站超文件資料中擷取所要的資料</li>
-<li>使用 Kaggle 與近端 SciTE 開發 Python 程式</li>
-</ol>
-<p>作業三的目的:</p>
-<ol>
-<li>著手利用 Python 解決各類問題</li>
-<li>利用 Python 修改 Solidworks 與 Inventor 零件尺寸</li>
-</ol>
-<br />Develop << <a href='Develop.html'>Previous</a> <a href='gitlab-ci.yml.html'>Next</a> >> gitlab-ci.yml</div>
+    <div id="tipue_search_content">List Remove Duplicates (列出刪除重複項)p.14 << <a href='List Remove Duplicates (列出刪除重複項)p.14.html'>Previous</a> <a href='Fibonacci Solutions(斐波那契解決方案)p.13.html'>Next</a> >> Fibonacci Solutions(斐波那契解決方案)p.13<br /><h1>Reverse Word Order(倒序)p.15</h1>
+<div><i>strings</i></div>
+<pre>Exercise 15 (and Solution)</pre>
+<p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">My</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
+</figure>
+<p>Then I would see the string:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">Michele</span> <span class="ow">is</span> <span class="n">name</span> <span class="n">My</span></code></pre>
+</figure>
+<p>shown back to me.</p>
+<pre>Discussion</pre>
+<p>Concepts for this week:</p>
+<ul>
+<li>More string things</li>
+</ul>
+<pre>More string things</pre>
+<p>Python has a lot of interesting things you can do with strings. I will show a few here, but you can see many more methods that may or may not be useful at the<span> </span><a href="https://docs.python.org/3.3/library/stdtypes.html?highlight=strings#string-methods">official Python documentation about the string format</a>.</p>
+<p>Remember that<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">strings are lists</a>.</p>
+<pre>Splitting strings</pre>
+<p>You can “split” or tear apart strings based on a given set of characters. For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">teststring</span> <span class="o">=</span> <span class="s">"this is a test"</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">teststring</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"t"</span><span class="p">)</span></code></pre>
+</figure>
+<p>And at the end,<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the list:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="p">[</span><span class="s">''</span><span class="p">,</span> <span class="s">'his is a '</span><span class="p">,</span> <span class="s">'es'</span><span class="p">,</span> <span class="s">''</span><span class="p">]</span></code></pre>
+</figure>
+<p>Instead of<span> </span><code class="highlighter-rouge">"t"</code>, you can write any character you want. If you do not include any character, it means “split on all whitespace”:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">teststring</span> <span class="o">=</span> <span class="s">"  this      has a lot    of   spaces and    tabs"</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">testring</span><span class="o">.</span><span class="n">split</span><span class="p">()</span></code></pre>
+</figure>
+<p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>contains:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="p">[</span><span class="s">'this'</span><span class="p">,</span> <span class="s">'has'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="s">'lot'</span><span class="p">,</span> <span class="s">'of'</span><span class="p">,</span> <span class="s">'spaces'</span><span class="p">,</span> <span class="s">'and'</span><span class="p">,</span> <span class="s">'tabs'</span><span class="p">]</span></code></pre>
+</figure>
+<pre>Joining strings</pre>
+<p>You can also relatively easily “join” or “smush” strings together:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">listofstrings</span> <span class="o">=</span> <span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="s">"**"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">listofstrings</span><span class="p">)</span></code></pre>
+</figure>
+<p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the string:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  a**b**c</code></pre>
+</figure>
+<p>Take a look at the official Python documentation for more information.</p>
+<pre>Happy coding!</pre>
+<pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">弦
+練習15（和解答）
+編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：
+
+  我叫米歇爾
+然後我會看到字符串：
+
+  米歇爾是我的名字
+顯示給我。
+
+討論區
+本週的概念：
+
+更弦的東西
+更弦的東西
+Python有很多有趣的事情，您可以使用字符串來完成。我將在這裡展示一些方法，但是您可以在關於字符串格式的官方Python文檔中看到更多可能有用或可能沒有用的方法。
+
+請記住，字符串是列表。
+
+分割字符串
+您可以根據給定的字符集“拆分”或拆分字符串。例如：
+
+  teststring =“這是一個測試”
+  結果= teststring.split（“ t”）
+最後，結果將包含列表：
+
+  [''，'他是'，'es'，'']
+您可以寫任何所需的字符，而不是“ t”。如果您不包含任何字符，則表示“在所有空格上分割”：
+
+  teststring =“這有很多空格和製表符”
+  結果= testring.split（）
+然後結果包含：
+
+  ['this'，'has'，'a'，'lot'，'of'，'spaces，'and'，'tabs']
+連接字符串
+您還可以相對容易地將字符串“連接”或“混入”：
+
+  listofstrings = ['a'，'b'，'c']
+  結果=“ **”。join（listofstrings）
+然後結果將包含字符串：
+
+  a ** b ** c
+查看官方Python文檔以獲取更多信息。
+
+編碼愉快！<strong><br/></strong></span></pre>
+<p><br/><br/></p>
+<br />List Remove Duplicates (列出刪除重複項)p.14 << <a href='List Remove Duplicates (列出刪除重複項)p.14.html'>Previous</a> <a href='Fibonacci Solutions(斐波那契解決方案)p.13.html'>Next</a> >> Fibonacci Solutions(斐波那契解決方案)p.13</div>
         
     <!-- footer -->
       <div class="container">
